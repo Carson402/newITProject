@@ -14,10 +14,9 @@ public class SupportTicket {
     @Override
     public String toString() {
 
-        String temp = "Support Ticket No = " + ticketNumber + "\nFirst Name = " + customerFirstName +
+        return "Support Ticket No = " + ticketNumber + "\nFirst Name = " + customerFirstName +
                 ", Last Name = " + customerLastName + "\nEmail = " + customerEmail +
                 "\nCreated on = " + timeAtCreation + "\nMessage = " + message;
-        return temp;
     }
 
     public SupportTicket(String customerFirstName, String customerLastName, String customerEmail, String message) {
