@@ -2,7 +2,6 @@ import java.util.HashMap;
 
 public class TicketManager {
 
-
     private static final HashMap<Integer,SupportTicket> ticketHashMap = new HashMap<>();
 
     public TicketManager() {
