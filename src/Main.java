@@ -10,7 +10,7 @@ public class Main {
                 "Sally","Jones",
                 "sjones@gmail.com",
                 "My pc wont work. I think the hardware is bad."));
-        System.out.println(db.getTicket(1).toString());
+        System.out.println(db.getTicket(ticket1.getTicketNumber()).toString());
 
     }
 }
