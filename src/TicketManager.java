@@ -13,8 +13,7 @@ public class TicketManager {
         ticketHashMap.put(ticket.getTicketNumber(),ticket);
     }
 
-    @Override
-    public String toString() {
-        return ticketHashMap.toString();
+    public SupportTicket getTicket(int ticketNumber) {
+        return ticketHashMap.get(ticketNumber);
     }
 }

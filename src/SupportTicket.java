@@ -1,25 +1,34 @@
 import javax.print.attribute.standard.DateTimeAtCreation;
 import java.util.Date;
-import java.util.HashMap;
 
 public class SupportTicket {
 
     private String customerFirstName;
     private String customerLastName;
     private String customerEmail;
-    private Date date;
     private String timeAtCreation;
     private String message;
-    private Integer ticketNumber;
-    private static int ticketCounter;
+    private Integer ticketNumber = 0;
+    public DateTimeAtCreation dateTimeAtCreation;
+
+    @Override
+    public String toString() {
+
+        String temp = "Support Ticket No = " + ticketNumber + "\nFirst Name = " + customerFirstName +
+                ", Last Name = " + customerLastName + "\nEmail = " + customerEmail +
+                "\nCreated on = " + timeAtCreation + "\nMessage = " + message;
+        return temp;
+    }
 
     public SupportTicket(String customerFirstName, String customerLastName, String customerEmail, String message) {
         this.customerFirstName = customerFirstName;
         this.customerLastName = customerLastName;
         this.customerEmail = customerEmail;
-        this.timeAtCreation = String.valueOf(date.getTime());
+        Date date = new Date();
+        DateTimeAtCreation dateTimeAtCreation = new DateTimeAtCreation(date);
+        this.timeAtCreation = dateTimeAtCreation.toString();
         this.message = message;
-        this.ticketNumber = ticketCounter;
+        int ticketNo = ticketNumber;
         ticketNumber++;
     }
 
