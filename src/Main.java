@@ -11,6 +11,7 @@ public class Main {
                 "sjones@gmail.com",
                 "My pc wont work. I think the hardware is bad."));
         System.out.println(db.getTicket(ticket1.getTicketNumber()).toString());
+        System.out.println("This is a new feature");
 
     }
 }
